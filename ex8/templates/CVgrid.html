@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="{{ url_for('static', filename='../static/js/JS.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/CVgrid.css') }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eden's Resume</title>
+</head>
+<body>
+<div class="grid-container">
+<div id="header"></div>
+<div class="left"></div>
+<div class="stuff">
+  <br><br>
+  <h1>RESUME</h1>
+  <h2>Eden Moran, 4th year student in industrual engineering</h2>
+  <hr />
+  <br>
+  <img  src="/static/images/1637837376256.jfif" id="fire" >
+  <p class="head">code knowledge</p>
+  <ul>
+    <li>SQL</li>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JAVA</li>
+    <li>PYTON</li>
+  </ul>
+  <p class="head">Skills</p>
+  <ul>
+    <li>creativity</li>
+    <li>interpersonal Skills</li>
+    <li>critical thinking</li>
+    <li>pubkic speaking</li>
+    <li>teamwork Skills</li>
+  </ul>
+  <p class="head">Education</p>
+  <ul>
+      <li>Rabin high school</li>
+  </ul>
+  <p class="head">Experience</p>
+  <ul>
+    <li>i worked as project manager</li>
+    <li>working in intel as data analyst</li>
+  </ul>
+</div>
+
+<div class="form">
+    <form>
+      <p class="head">contact me:</p>
+        <label for="fname">First Name</label>
+        <input type="text" id="fn" name="firstname" ><br>
+
+        <label for="fname">Last Name</label>
+        <input type="text" id="ls" name="lasttname" ><br>
+
+        <label for="subject">Subject</label> <br>
+        <textarea id="id3" name="subject" required minlength="20" style="height:150px"></textarea><br>
+        
+        <button type="button" onclick="validate()">Submit</button>
+
+    </form>
+  </div>
+</div>
+</head>
+</body>
+</html>

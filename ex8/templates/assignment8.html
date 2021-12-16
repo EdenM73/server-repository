@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+
+{% block title %}assignment8{% endblock %}
+
+{% block tohen %}
+    {{ super() }}
+    <h1>MY NAME: {{ name | default('unknown users name')}}</h1>
+    <h1>MY AGE: {{ age | default('unknown users age')}}</h1>
+ <h2>my hobbies:</h2>
+<ol>
+    {% for hob in hobbies %}
+    <li>{{ hob }}</li>
+    {% endfor %}
+</ol>
+
+{% if hobby=="cook" %}
+<h2>Yor are right! Cooking is my favorite hobby</h2>
+{% else %}
+<h2>Yor are wrong! Cooking is my favorite hobby</h2>
+{% endif %}
+{% endblock tohen %}

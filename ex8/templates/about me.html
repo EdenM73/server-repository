@@ -5,6 +5,10 @@
     <title>about my</title>
 </head>
 <body>
+{% if session.username %}
+        <h2>You're connected, {{ session.username }}</h2>
+    {% endif %}
+ <a href="/">CVgrid</a> | <a href="/exe2">exercise 2</a> | <a href="/forms">forms exercise</a> | <a href='/assignment8'>assignment 8 </a> | <a href='/assignment9'>assignment 9</a>
 <h1> some details about me:</h1>
 </body>
 </html>

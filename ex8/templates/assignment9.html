@@ -1,0 +1,33 @@
+{% extends 'pages/base/base.html' %}
+{% block title %} Exercise 9 {% endblock %}
+
+{% block tohen %}
+    <h1> Please search you user name:</h1>
+    <form action="assignment9" method="GET" name="search">
+        Username: <input name="username" type="text" >
+        <input type="submit" value="search">
+    </form>
+    {% if Users %}
+        {% for user in Users.values() %}
+            {% for m in user %}
+                {{ m }}:{{ user[m] }} <br>
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+
+    {% if UsersMatch %}
+        <p> User name: {{ UsersMatch['user name'] }}</p>
+        <p> User Email: {{ UsersMatch['user Email'] }}</p>
+    {% endif %}
+
+    {% if session.username %}
+        <h1>Welcome dear friend, enjoy!, {{ session.username }}</h1>
+        <a href="logout">Log Out</a>
+    {% else %}
+        <h1>Please register to the website:</h1>
+        <form name="registration" method="POST" action="/assignment9">
+            Enter your name: <input name="username">
+            <input type="Submit" value="submit">
+        </form>
+    {% endif %}
+{% endblock %}
